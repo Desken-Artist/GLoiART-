@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ken's original artworks, process videos and art prints.">
+  <title>Ken — Art Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home">KEN<span>.</span></a>
+    <nav>
+      <a href="#artworks">Artworks</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">ORIGINAL ART • PROCESS • PRINTS</p>
+        <h1>Artworks made to be <em>seen</em>, studied and lived with.</h1>
+        <p class="hero-text">Explore original artworks, watch how they were made, and discover prints available for each piece.</p>
+        <a class="button" href="#artworks">Explore artworks</a>
+      </div>
+    </section>
+
+    <section id="artworks" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">THE COLLECTION</p>
+        <h2>Original artworks</h2>
+        <p>Each artwork includes its making process and available print editions.</p>
+      </div>
+      <div id="artwork-grid" class="artwork-grid"></div>
+    </section>
+
+    <section id="about" class="about section">
+      <div>
+        <p class="eyebrow">ABOUT THE ARTIST</p>
+        <h2>Stories through drawing and painting.</h2>
+      </div>
+      <div>
+        <p>I create artwork with a focus on draftsmanship, expressive characters and visual storytelling. This portfolio brings the finished pieces together with the process behind them.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section">
+      <p class="eyebrow">GET IN TOUCH</p>
+      <h2>Interested in an artwork or print?</h2>
+      <p>Use the WhatsApp button on any artwork to ask about that specific piece.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Ken. All rights reserved.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

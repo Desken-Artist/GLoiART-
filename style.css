@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+:root {
+  --paper: #f5f1ea;
+  --ink: #171717;
+  --muted: #716c65;
+  --line: #d8d1c7;
+  --white: #fffdf9;
+  --accent: #9b5d3c;
+  --max: 1180px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.6;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; }
+
+.site-header {
+  height: 78px;
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  background: rgba(245,241,234,.96);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo { font-weight: 600; letter-spacing: .12em; font-size: 1.05rem; }
+.logo span { color: var(--accent); }
+nav { display: flex; gap: 32px; font-size: .9rem; }
+nav a:hover { color: var(--accent); }
+.menu-toggle { display: none; background: none; border: 0; font-size: 1.5rem; }
+
+.hero {
+  min-height: 76vh;
+  display: flex;
+  align-items: center;
+  max-width: var(--max);
+  margin: auto;
+  padding: 8vw 5vw;
+}
+.hero-copy { max-width: 800px; }
+.eyebrow {
+  font-size: .72rem;
+  letter-spacing: .18em;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+h1, h2, h3 { line-height: 1.08; margin-top: 0; }
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3.2rem, 7vw, 6.8rem);
+  font-weight: 500;
+  margin-bottom: 26px;
+}
+h1 em { color: var(--accent); }
+h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: clamp(2.3rem, 5vw, 4.2rem);
+}
+h3 { font-size: 1.15rem; margin-bottom: 8px; }
+.hero-text { max-width: 600px; color: var(--muted); font-size: 1.05rem; margin-bottom: 30px; }
+
+.section { max-width: var(--max); margin: auto; padding: 100px 5vw; }
+.section-heading { max-width: 700px; margin-bottom: 45px; }
+.section-heading p:last-child { color: var(--muted); }
+
+.button {
+  display: inline-block;
+  padding: 13px 20px;
+  background: var(--ink);
+  color: white;
+  font-size: .86rem;
+  font-weight: 600;
+  transition: transform .2s, opacity .2s;
+}
+.button:hover { transform: translateY(-2px); opacity: .88; }
+.button-dark { background: var(--ink); margin-top: 18px; }
+.whatsapp-button { background: #236b43; }
+
+.artwork-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 28px;
+}
+.art-card { background: var(--white); }
+.art-image-wrap, .print-image-wrap, .detail-main-image {
+  position: relative;
+  background: #ded8cf;
+  overflow: hidden;
+}
+.art-image-wrap { aspect-ratio: 4/5; }
+.art-image-wrap img { height: 100%; object-fit: cover; transition: transform .5s; }
+.art-card:hover .art-image-wrap img { transform: scale(1.025); }
+.image-placeholder {
+  display: none;
+  position: absolute;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #8a837a;
+  font-size: .85rem;
+}
+.placeholder .image-placeholder { display: flex; }
+.art-card-body { padding: 22px; }
+.meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.art-card-body p { color: var(--muted); margin: 0 0 20px; }
+.card-actions { display: flex; justify-content: space-between; align-items: center; font-size: .84rem; }
+.card-actions > a:first-child { font-weight: 600; }
+.whatsapp-small { color: #236b43; font-weight: 600; }
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.about p:not(.eyebrow) { color: var(--muted); font-size: 1.1rem; }
+.contact { text-align: center; }
+.contact > p { max-width: 600px; margin-left: auto; margin-right: auto; color: var(--muted); }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 5vw;
+  color: var(--muted);
+  font-size: .8rem;
+  text-align: center;
+}
+
+/* Artwork detail */
+.art-detail { padding-top: 55px; }
+.back-link { color: var(--muted); font-size: .85rem; display: inline-block; margin-bottom: 40px; }
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 70px;
+  align-items: start;
+}
+.detail-main-image { min-height: 500px; }
+.detail-main-image img { max-height: 750px; object-fit: contain; }
+.detail-info { padding-top: 25px; }
+.detail-info h1 { font-size: clamp(3rem, 6vw, 5.5rem); }
+.lead { color: var(--muted); font-size: 1.05rem; margin-bottom: 35px; }
+dl { border-top: 1px solid var(--line); margin: 0 0 30px; }
+dl div { display: flex; justify-content: space-between; gap: 20px; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: .9rem; }
+dt { color: var(--muted); }
+dd { margin: 0; text-align: right; }
+
+.video-box video { display: block; width: 100%; max-height: 720px; background: #111; }
+.video-note { color: var(--muted); font-size: .8rem; }
+
+.prints { border-top: 1px solid var(--line); }
+.prints-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.print-card { background: var(--white); }
+.print-image-wrap { aspect-ratio: 4/3; }
+.print-image-wrap img { height: 100%; object-fit: cover; }
+.print-info { padding: 22px; }
+.print-size { font-size: .7rem; letter-spacing: .14em; color: var(--muted); }
+.print-info h3 { margin-top: 8px; }
+.print-info strong { display: block; font-size: .95rem; }
+
+code { background: #e7e1d8; padding: 2px 5px; }
+
+@media (max-width: 760px) {
+  .site-header { height: 68px; }
+  nav {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    padding: 20px 5vw;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    gap: 15px;
+  }
+  nav.open { display: flex; }
+  .menu-toggle { display: block; }
+  .hero { min-height: 70vh; padding-top: 50px; }
+  .section { padding-top: 70px; padding-bottom: 70px; }
+  .artwork-grid, .prints-grid, .about, .detail-grid { grid-template-columns: 1fr; }
+  .artwork-grid { gap: 45px; }
+  .detail-grid { gap: 30px; }
+  .detail-main-image { min-height: 0; }
+  .prints-grid { gap: 35px; }
+}
