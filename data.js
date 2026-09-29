@@ -6,7 +6,7 @@
   Example Cameroon: 2376XXXXXXXX
 */
 
-const WHATSAPP_NUMBER = "237XXXXXXXXX";
+const WHATSAPP_NUMBER = "237672998354";
 
 const artworks = [
   {
