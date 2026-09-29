@@ -139,11 +139,10 @@ h3 { font-size: 1.15rem; margin-bottom: 8px; }
 .art-card-body { padding: 22px; }
 .art-card-body {
   display: block;
-  position: relative;
-  z-index: 5;
-  background: var(--white);
+  width: 100%;
+  height: auto;
   padding: 22px;
-  min-height: 150px;
+  background: var(--white);
 }
 .meta {
   display: flex;
