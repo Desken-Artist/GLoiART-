@@ -325,15 +325,20 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  background: #123f32;
+  color: white;
+  border-top: 1px solid #123f32;
+  border-bottom: 1px solid #123f32;
+}
+
+.about .eyebrow {
+  color: #c9b98f;
 }
 
 .about p:not(.eyebrow) {
-  color: var(--muted);
+  color: #e8e4dc;
   font-size: 1.1rem;
 }
-
 
 /* =========================
    CONTACT
