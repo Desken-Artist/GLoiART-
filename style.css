@@ -64,6 +64,9 @@ h1 {
   margin-bottom: 26px;
 }
 h1 em { color: var(--accent); }
+.gold-text {
+    color: #D4AF37;
+}
 h2 {
   font-family: "Playfair Display", serif;
   font-weight: 500;
