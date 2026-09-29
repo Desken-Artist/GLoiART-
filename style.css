@@ -64,12 +64,7 @@ h1 {
   margin-bottom: 26px;
 }
 h1 em { color: var(--accent); }
-.gold-text {
-    color: #D4AF37;
-}
-.brown-text {
-  color: #9b5d3c;
-}
+
 h2 {
   font-family: "Playfair Display", serif;
   font-weight: 500;
@@ -233,4 +228,10 @@ code { background: #e7e1d8; padding: 2px 5px; }
   .home-banner img {
     height: 240px;
   }
+}
+.gold-text {
+    color: #D4AF37;
+}
+.brown-text {
+  color: #9b5d3c;
 }
