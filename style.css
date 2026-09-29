@@ -106,13 +106,13 @@ nav a:hover {
 ========================= */
 
 .hero {
-  min-height: 76vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: var(--max);
   margin: auto;
-  padding: 8vw 5vw;
+  padding: 70px 5vw;
   text-align: center;
 }
 
