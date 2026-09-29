@@ -131,6 +131,14 @@ h3 { font-size: 1.15rem; margin-bottom: 8px; }
 }
 .placeholder .image-placeholder { display: flex; }
 .art-card-body { padding: 22px; }
+.art-card-body {
+  display: block;
+  position: relative;
+  z-index: 5;
+  background: var(--white);
+  padding: 22px;
+  min-height: 150px;
+}
 .meta {
   display: flex;
   justify-content: space-between;
