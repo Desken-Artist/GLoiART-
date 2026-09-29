@@ -91,13 +91,19 @@ h3 { font-size: 1.15rem; margin-bottom: 8px; }
 .whatsapp-button { background: #236b43; }
 
 .artwork-grid {
+.artwork-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 60px 28px;
+  align-items: start;
 }
+
 .art-card {
+  display: block;
+  width: 100%;
+  height: auto;
   background: var(--white);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .art-image-wrap {
