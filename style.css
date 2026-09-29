@@ -95,15 +95,30 @@ h3 { font-size: 1.15rem; margin-bottom: 8px; }
   grid-template-columns: repeat(2, 1fr);
   gap: 60px 28px;
 }
-.art-card { background: var(--white); }
-.art-image-wrap, .print-image-wrap, .detail-main-image {
-  position: relative;
-  background: #ded8cf;
+.art-card {
+  background: var(--white);
   overflow: hidden;
 }
-.art-image-wrap { aspect-ratio: 4/5; }
-.art-image-wrap img { height: 100%; object-fit: cover; transition: transform .5s; }
-.art-card:hover .art-image-wrap img { transform: scale(1.025); }
+
+.art-image-wrap {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #ded8cf;
+}
+
+.art-image-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform .5s;
+}
+
+.art-card:hover .art-image-wrap img {
+  transform: scale(1.025);
+}
 .image-placeholder {
   display: none;
   position: absolute;
