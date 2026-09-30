@@ -227,22 +227,25 @@ h3 {
    ARTWORK GRID
 ========================= */
 
+/* Two artworks per row */
 .artwork-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 28px;
-  row-gap: 80px;
+  row-gap: 70px;
   align-items: start;
 }
 
+/* Individual artwork */
 .art-card {
   display: block;
   width: 100%;
   height: auto;
-  background: var(--white);
+  background: transparent;
   overflow: visible;
 }
 
+/* Artwork image container */
 .art-image-wrap {
   display: block;
   width: 100%;
@@ -251,18 +254,21 @@ h3 {
   background: #ded8cf;
 }
 
+/* Preserve the artwork's original aspect ratio */
 .art-image-wrap img {
   display: block;
   width: 100%;
   height: auto;
   object-fit: contain;
-  transition: transform .5s;
+  transition: transform .5s ease;
 }
 
+/* Very subtle hover effect */
 .art-card:hover .art-image-wrap img {
   transform: scale(1.025);
 }
 
+/* Placeholder for missing artwork images */
 .image-placeholder {
   display: none;
   position: absolute;
@@ -278,32 +284,58 @@ h3 {
   display: flex;
 }
 
+
+/* =========================
+   ARTWORK INFORMATION
+========================= */
+
 .art-card-body {
   display: block;
   width: 100%;
   height: auto;
-  padding: 22px;
-  background: var(--white);
+  padding: 18px 0 0;
+  background: transparent;
 }
 
+/* Year / category */
 .meta {
   display: flex;
   justify-content: space-between;
+  gap: 15px;
   color: var(--muted);
   font-size: .72rem;
   text-transform: uppercase;
   letter-spacing: .08em;
+  margin-bottom: 10px;
 }
 
+/* Artwork title */
+.art-card-body h3 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0 0 10px;
+}
+
+/* Artwork description */
 .art-card-body p {
   color: var(--muted);
   margin: 0 0 20px;
+  font-size: .95rem;
+  line-height: 1.6;
 }
+
+
+/* =========================
+   ARTWORK ACTIONS
+========================= */
 
 .card-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
   font-size: .84rem;
 }
 
@@ -339,6 +371,7 @@ h3 {
   color: #e8e4dc;
   font-size: 1.1rem;
 }
+
 
 /* =========================
    CONTACT
@@ -575,6 +608,7 @@ code {
     padding-bottom: 70px;
   }
 
+  /* One artwork per row on phones */
   .artwork-grid,
   .prints-grid,
   .about,
@@ -584,6 +618,14 @@ code {
 
   .artwork-grid {
     row-gap: 55px;
+  }
+
+  .art-card-body {
+    padding-top: 16px;
+  }
+
+  .art-card-body h3 {
+    font-size: 1.5rem;
   }
 
   .detail-grid {
